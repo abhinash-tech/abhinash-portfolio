@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface Particle {
@@ -14,6 +14,7 @@ interface Particle {
 
 export default function BackgroundEffects() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -23,13 +24,16 @@ export default function BackgroundEffects() {
 
     let animationFrameId: number;
     const particles: Particle[] = [];
-    const PARTICLE_COUNT = 55;
 
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      setIsMobile(window.innerWidth < 768);
     };
     resize();
+    
+    // Use fewer particles on mobile
+    const PARTICLE_COUNT = canvas.width < 768 ? 15 : 55;
     window.addEventListener("resize", resize);
 
     for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -85,7 +89,7 @@ export default function BackgroundEffects() {
             "radial-gradient(circle, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0.04) 50%, transparent 70%)",
           filter: "blur(60px)",
         }}
-        animate={{
+        animate={isMobile ? { opacity: 0.7 } : {
           scale: [1, 1.12, 1],
           opacity: [0.7, 1, 0.7],
         }}
@@ -104,7 +108,7 @@ export default function BackgroundEffects() {
             "radial-gradient(circle, rgba(16,185,129,0.08) 0%, rgba(16,185,129,0.03) 50%, transparent 70%)",
           filter: "blur(60px)",
         }}
-        animate={{
+        animate={isMobile ? { opacity: 0.6 } : {
           scale: [1, 1.08, 1],
           opacity: [0.6, 0.9, 0.6],
         }}
@@ -124,7 +128,7 @@ export default function BackgroundEffects() {
             "radial-gradient(circle, rgba(167,139,250,0.07) 0%, transparent 70%)",
           filter: "blur(50px)",
         }}
-        animate={{
+        animate={isMobile ? { opacity: 0.5 } : {
           scale: [1, 1.15, 1],
           x: [0, 20, 0],
           opacity: [0.5, 0.8, 0.5],

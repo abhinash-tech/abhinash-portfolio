@@ -1,9 +1,18 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ProfileImage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <motion.div
       className="relative flex items-center justify-center"
@@ -14,7 +23,7 @@ export default function ProfileImage() {
       {/* Subtle float loop */}
       <motion.div
         className="relative"
-        animate={{ y: [0, -12, 0] }}
+        animate={isMobile ? { y: 0 } : { y: [0, -12, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         {/* Outer glow ring */}
@@ -29,7 +38,7 @@ export default function ProfileImage() {
             borderRadius: "50%",
             padding: "2px",
           }}
-          animate={{ rotate: 360 }}
+          animate={isMobile ? { rotate: 0 } : { rotate: 360 }}
           transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
         >
           <div className="w-full h-full rounded-full bg-[#07070e]" />
