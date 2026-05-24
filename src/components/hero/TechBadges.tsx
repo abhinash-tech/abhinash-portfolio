@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const TECH_STACK = [
@@ -13,6 +14,15 @@ const TECH_STACK = [
 ];
 
 export default function TechBadges() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <div
       className="flex flex-wrap gap-2 sm:gap-2.5"
@@ -23,12 +33,20 @@ export default function TechBadges() {
           key={tech.label}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium font-[var(--font-inter)] glass border border-white/10 text-[#9ca3af] hover:text-[#c7d2fe] hover:border-indigo-500/30 transition-all duration-300 cursor-default select-none"
           initial={{ opacity: 0, y: 20, scale: 0.85 }}
-          animate={{
+          animate={isMobile ? {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          } : {
             opacity: 1,
             y: [null, i % 2 === 0 ? -4 : -6, 0],
             scale: 1,
           }}
-          transition={{
+          transition={isMobile ? {
+            opacity: { duration: 0.5, delay: 0.8 + i * 0.07, ease: "easeOut" },
+            scale: { duration: 0.5, delay: 0.8 + i * 0.07, ease: "easeOut" },
+            y: { duration: 0.5, delay: 0.8 + i * 0.07, ease: "easeOut" }
+          } : {
             opacity: { duration: 0.5, delay: 0.8 + i * 0.07, ease: "easeOut" },
             scale: { duration: 0.5, delay: 0.8 + i * 0.07, ease: "easeOut" },
             y: {
