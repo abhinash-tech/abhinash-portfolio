@@ -38,12 +38,17 @@ export default function BlackHole() {
       
       {/* Cartoon Event Horizon (Solid Black Core with thick bright outline) */}
       <div 
-        className="absolute w-32 h-32 rounded-full bg-[#030308] border-[4px] border-indigo-300 z-10" 
+        className="absolute w-32 h-32 rounded-full bg-[#030308] border-[4px] border-indigo-300 z-10 flex items-center justify-center" 
         style={{ 
           transform: "translateZ(20px)",
           boxShadow: "0 0 50px rgba(167,139,250,1), inset 0 0 20px rgba(167,139,250,0.5)"
         }}
       >
+        {/* AI Text */}
+        <span className="text-4xl font-black font-[var(--font-poppins)] tracking-widest bg-gradient-to-br from-red-400 via-rose-500 to-red-600 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(225,29,72,0.6)]">
+          AI
+        </span>
+
         {/* Cartoon Highlight/Eye reflection */}
         <div className="absolute top-4 right-6 w-6 h-3 rounded-full bg-indigo-200/60 -rotate-12 blur-[1px]" />
         <div className="absolute top-8 right-3 w-3 h-2 rounded-full bg-indigo-200/60 -rotate-12 blur-[1px]" />
