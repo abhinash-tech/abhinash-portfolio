@@ -83,7 +83,7 @@ export default function BackgroundEffects() {
 
       {/* Primary gradient blob — top left */}
       <motion.div
-        className="absolute -top-48 -left-48 w-[700px] h-[700px] rounded-full"
+        className="hidden md:block absolute -top-48 -left-48 w-[700px] h-[700px] rounded-full"
         style={{
           background:
             "radial-gradient(circle, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0.04) 50%, transparent 70%)",
@@ -102,7 +102,7 @@ export default function BackgroundEffects() {
 
       {/* Secondary blob — bottom right */}
       <motion.div
-        className="absolute -bottom-64 -right-48 w-[600px] h-[600px] rounded-full"
+        className="hidden md:block absolute -bottom-64 -right-48 w-[600px] h-[600px] rounded-full"
         style={{
           background:
             "radial-gradient(circle, rgba(16,185,129,0.08) 0%, rgba(16,185,129,0.03) 50%, transparent 70%)",
@@ -122,7 +122,7 @@ export default function BackgroundEffects() {
 
       {/* Accent blob — top right */}
       <motion.div
-        className="absolute top-16 right-0 w-[400px] h-[400px] rounded-full"
+        className="hidden md:block absolute top-16 right-0 w-[400px] h-[400px] rounded-full"
         style={{
           background:
             "radial-gradient(circle, rgba(167,139,250,0.07) 0%, transparent 70%)",

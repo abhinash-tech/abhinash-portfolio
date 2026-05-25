@@ -27,7 +27,7 @@ export default function ProfileImage() {
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         {/* Outer glow ring */}
-        <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-indigo-500/20 via-violet-500/10 to-transparent blur-2xl" />
+        <div className="hidden md:block absolute -inset-4 rounded-full bg-gradient-to-br from-indigo-500/20 via-violet-500/10 to-transparent blur-2xl" />
 
         {/* Rotating dashed ring */}
         <motion.div
