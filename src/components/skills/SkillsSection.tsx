@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SkillsOrbit from "./SkillsOrbit";
 import SkillsGrid from "./SkillsGrid";
+import BlackHole from "./BlackHole";
 
 export default function SkillsSection() {
   const ref = useRef(null);
@@ -63,7 +64,8 @@ export default function SkillsSection() {
           className="w-full"
         >
           {/* Desktop Orbit Layout */}
-          <div className="hidden lg:flex justify-center items-center w-full min-h-[800px] overflow-visible">
+          <div className="hidden lg:flex justify-center items-center w-full min-h-[800px] overflow-visible relative">
+            <BlackHole />
             <SkillsOrbit />
           </div>
 
