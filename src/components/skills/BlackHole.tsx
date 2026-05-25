@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function BlackHole() {
   return (
     <div 
-      className="hidden lg:flex absolute -top-16 -right-16 xl:-top-20 xl:-right-32 w-80 h-80 items-center justify-center pointer-events-none z-0 scale-[0.6] xl:scale-75"
+      className="hidden lg:flex absolute -top-16 right-4 xl:-top-20 xl:right-16 w-80 h-80 items-center justify-center pointer-events-none z-0 scale-[0.6] xl:scale-75"
       aria-hidden="true"
       style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
     >
