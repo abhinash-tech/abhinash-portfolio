@@ -23,7 +23,7 @@ export default function ShootingStars() {
   ];
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none hidden lg:block z-0" aria-hidden="true">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none hidden lg:block z-0" aria-hidden="true">
       {stars.map((star) => (
         <div
           key={star.id}

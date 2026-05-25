@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/ui/Navbar";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import ShootingStars from "@/components/hero/ShootingStars";
 
 export default function RootLayout({
   children,
@@ -60,7 +61,8 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${inter.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-[#07070e] text-[#e8eaf0] flex flex-col selection:bg-indigo-500/30 selection:text-white">
+      <body className="min-h-full bg-[#07070e] text-[#e8eaf0] flex flex-col selection:bg-indigo-500/30 selection:text-white relative">
+        <ShootingStars />
         <ScrollProgress />
         <Navbar />
         {children}

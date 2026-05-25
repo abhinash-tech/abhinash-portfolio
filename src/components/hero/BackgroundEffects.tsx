@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import ShootingStars from "./ShootingStars";
 
 interface Particle {
   x: number;
@@ -76,9 +75,6 @@ export default function BackgroundEffects() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-      {/* Shooting Stars (Desktop only) */}
-      <ShootingStars />
-
       {/* Canvas particles */}
       <canvas
         ref={canvasRef}
