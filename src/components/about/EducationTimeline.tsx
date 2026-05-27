@@ -18,6 +18,7 @@ const EDUCATION = [
     highlights: ["DSA", "Web Dev", "AI/ML", "Full Stack"],
     icon: "/education/nxtwave.png",
     isImage: true,
+    bgWhite: true,
   },
   {
     id: "uni",
@@ -31,6 +32,7 @@ const EDUCATION = [
     highlights: ["Python", "C", "Java", "OOPs"],
     icon: "/education/anurag.jpg",
     isImage: true,
+    bgWhite: false,
   },
   {
     id: "jr",
@@ -118,8 +120,8 @@ export default function EducationTimeline() {
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                 >
                   {edu.isImage ? (
-                    <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10">
-                      <Image src={edu.icon} alt={edu.institution} fill className="object-cover bg-[#07070e]" />
+                    <div className={`relative w-full h-full rounded-full overflow-hidden border border-white/10 ${edu.bgWhite ? "bg-white p-0.5" : ""}`}>
+                      <Image src={edu.icon} alt={edu.institution} fill sizes="40px" quality={100} className="object-cover" />
                     </div>
                   ) : (
                     <span>{edu.icon}</span>
