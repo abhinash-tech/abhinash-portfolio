@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 const INTERESTS = [
   { label: "AI Research", icon: "🔬" },
-  { label: "Cricket", icon: "🏏" },
+  { label: "Online Games", icon: "🎮" },
   { label: "Tech Blogs", icon: "📰" },
   { label: "Movies", icon: "🎬" },
 ];
