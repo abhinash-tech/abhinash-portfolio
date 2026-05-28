@@ -167,11 +167,11 @@ function TimelineHorizontal() {
     {
       id: "nxtwave",
       institution: "NxtWave",
-      degree: "CCBP Academy",
+      degree: "Industry-Aligned Software Development & AI/ML Program",
       period: "2024 – Present",
       icon: "/education/nxtwave.png",
       isImage: true,
-      description: "Learn like top IITians and achieve high-paid software jobs.",
+      description: "Hands-on learning • Real-world projects • Modern tech stack",
       highlights: ["DSA", "Web Dev", "AI/ML", "Full Stack"],
       current: true,
       step: "04",
