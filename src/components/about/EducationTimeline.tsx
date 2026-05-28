@@ -9,12 +9,12 @@ const EDUCATION = [
   {
     id: "nxtwave",
     institution: "NxtWave",
-    degree: "Industry-Aligned Software Development & AI/ML Program",
+    degree: "CCBP - Academy",
     period: "2024 – Present",
     location: "Online",
     current: true,
     description:
-      "Hands-on learning • Real-world projects • Modern tech stack",
+      "Industry-Aligned Software Development & AI/ML Program\nHands-on learning • Real-world projects • Modern tech stack",
     highlights: ["DSA", "Web Dev", "AI/ML", "Full Stack"],
     icon: "/education/nxtwave.png",
     isImage: true,
@@ -170,7 +170,7 @@ export default function EducationTimeline() {
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-[#6b7280] font-[var(--font-inter)] leading-relaxed mb-3">
+                <p className="text-xs text-[#6b7280] font-[var(--font-inter)] leading-relaxed mb-3 whitespace-pre-line">
                   {edu.description}
                 </p>
 

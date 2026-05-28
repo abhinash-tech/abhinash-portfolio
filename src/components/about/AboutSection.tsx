@@ -167,11 +167,11 @@ function TimelineHorizontal() {
     {
       id: "nxtwave",
       institution: "NxtWave",
-      degree: "Industry-Aligned Software Development & AI/ML Program",
+      degree: "CCBP - Academy",
       period: "2024 – Present",
       icon: "/education/nxtwave.png",
       isImage: true,
-      description: "Hands-on learning • Real-world projects • Modern tech stack",
+      description: "Industry-Aligned Software Development & AI/ML Program\nHands-on learning • Real-world projects • Modern tech stack",
       highlights: ["DSA", "Web Dev", "AI/ML", "Full Stack"],
       current: true,
       step: "04",
@@ -237,7 +237,7 @@ function TimelineHorizontal() {
             </h4>
             <p className="text-sm text-[#9ca3af] font-[var(--font-inter)] mb-1">{edu.degree}</p>
             <p className="text-xs text-[#4b5563] font-[var(--font-inter)] mb-4">{edu.period}</p>
-            <p className="text-xs text-[#6b7280] font-[var(--font-inter)] leading-relaxed mb-4">
+            <p className="text-xs text-[#6b7280] font-[var(--font-inter)] leading-relaxed mb-4 whitespace-pre-line">
               {edu.description}
             </p>
             <div className="flex flex-wrap gap-1.5">
