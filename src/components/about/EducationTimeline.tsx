@@ -9,12 +9,12 @@ const EDUCATION = [
   {
     id: "nxtwave",
     institution: "NxtWave",
-    degree: "CCBP Academy - Smart",
+    degree: "Industry-Aligned Software Development & AI/ML Program",
     period: "2024 – Present",
     location: "Online",
     current: true,
     description:
-      "Learn like top IITians and achieve high-paid software jobs.",
+      "Hands-on learning • Real-world projects • Modern tech stack",
     highlights: ["DSA", "Web Dev", "AI/ML", "Full Stack"],
     icon: "/education/nxtwave.png",
     isImage: true,
